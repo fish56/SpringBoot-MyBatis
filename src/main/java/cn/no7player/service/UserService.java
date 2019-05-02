@@ -15,10 +15,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public User getUserInfo(){
-        User user=userMapper.findUserInfo();
-        //User user=null;
-        return user;
+    public User getUserById(Integer id){
+        return userMapper.selectUserById(id);
     }
-
 }
