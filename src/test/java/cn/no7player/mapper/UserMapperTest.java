@@ -13,9 +13,11 @@ public class UserMapperTest extends ApplicationTest {
     @Autowired
     private UserMapper userMapper;
 
+    // 看看环境是否ok
     @Test
     public void isEnvOk(){}
 
+    // 记得先初始化数据库
     @Test
     public void getUser(){
         User admin = userMapper.selectUserById(1);

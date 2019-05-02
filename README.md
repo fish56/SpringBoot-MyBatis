@@ -54,15 +54,15 @@ public class Application {
 在这个文件中我们通过Java Config的方式配置了两个bean，正是我们
 需要的数据源以及session工厂。
 
-然后我们在创建session工厂的时候，告知MyBatis我们的mapper文件的位置
+然后我们再创建session工厂的时候，告知MyBatis我们的mapper文件的位置
 ```java
 sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mybatis/*.xml"));
 ```
 Mapper文件的具体内容大家自己看，很简单。
 
-然后我们在创建数据库的接口`cn.no7player.mapper.UserMapper`
+然后我们再创建dao层：`cn.no7player.mapper.UserMapper`
 
-上面基本和在SpringMVC中使用MyBatis基本相同
+上面基本和在SpringMVC中使用MyBatis基本相同。
 
 **然后很关键的**：把Mapper文件和我们的dao层联系起来
 
@@ -70,9 +70,8 @@ Mapper文件的具体内容大家自己看，很简单。
 @MapperScan("cn.no7player.mapper")
 ```
 把这个注解标注在我们的类上面，使得MyBatis-Starter能够正确的关联
-两者！！！
+两者！！！一定不能没有！！！
 
-一定不能没有！！！
 
 ## 如何确认我配置成功了？
 
@@ -81,7 +80,7 @@ Mapper文件的具体内容大家自己看，很简单。
    
 2. 运行测试用例，如果测试通过，表明你配置成功了
 
-3. 或者你直接启动SpringBoot程序，然后再访问/users/1这个路由，
+3. 或者你可以直接启动SpringBoot程序，然后再访问/users/1这个路由，
    如果返回了一个JSON数据，那也证明你配置成功了
 
 
