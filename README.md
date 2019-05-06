@@ -75,12 +75,14 @@ Mapper文件的具体内容大家自己看，很简单。
 
 ## 如何确认我配置成功了？
 
-1. 初始化数据库，这个我在database/initDB.sql这个文件中写好了，
-   大家执行下就行了
+1. 数据库使用的是内存数据库h2，不用额外配置
    
 2. 运行测试用例，如果测试通过，表明你配置成功了
 
 3. 或者你可以直接启动SpringBoot程序，然后再访问/users/1这个路由，
    如果返回了一个JSON数据，那也证明你配置成功了
 
+## 其他
+不过上述其实不完全算是Spring  Boot整合MyBatis。
 
+只是在SpringBoot中使用JavaBean的方式配置，通过MyBatisSpringBootStarter的可以看这里：https://github.com/fish56/springboot-socks/tree/master/springboot-mybatis

@@ -16,6 +16,6 @@ public class UserService {
     private UserMapper userMapper;
 
     public User getUserById(Integer id){
-        return userMapper.selectUserById(id);
+        return userMapper.selectById(id);
     }
 }

@@ -1,7 +1,3 @@
-create database springboot_mybatis;
-use springboot_mybatis;
-
-drop table if exists user;
 create table user(
   id int unsigned auto_increment,
   name varchar(20) not null ,

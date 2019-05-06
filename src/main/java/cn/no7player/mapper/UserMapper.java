@@ -1,10 +1,8 @@
 package cn.no7player.mapper;
 
 import cn.no7player.model.User;
+import org.apache.ibatis.annotations.Mapper;
 
-/**
- * Created by zl on 2015/8/27.
- */
 public interface UserMapper {
-    public User selectUserById(Integer id);
+    public User selectById(Integer id);
 }
