@@ -1,5 +1,2 @@
 target/
 .idea/
-
-# 为了方便大家使用，保留.idea
-!.idea/
